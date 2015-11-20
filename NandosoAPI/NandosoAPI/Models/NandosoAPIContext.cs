@@ -25,6 +25,7 @@ namespace NandosoAPI.Models
 
             protected override void Seed(NandosoAPIContext context)
             {
+
                 var items = new List<Item>
                 {
                     new Item{ name = "Veggie Paella", vegetarian = true, glutenFree = true, price = 13.9, discount = 15},
@@ -40,16 +41,20 @@ namespace NandosoAPI.Models
                 };
                 items.ForEach(s => context.Items.AddOrUpdate(p => p.name, s));
                 context.SaveChanges();
+                Admin admin = new Admin("admin", "admin");
+                context.Admins.AddOrUpdate(admin);
+                context.SaveChanges();
             }
         }
 
 
-        public NandosoAPIContext() : base("name=NandosoAPIContext")
+        public NandosoAPIContext()
+            : base("name=NandosoAPIContext")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<NandosoAPIContext, MyConfiguration>());
         }
 
         public System.Data.Entity.DbSet<NandosoAPI.Models.Item> Items { get; set; }
-    
+        public System.Data.Entity.DbSet<NandosoAPI.Models.Admin> Admins { get; set; }
     }
 }
