@@ -12,8 +12,6 @@ namespace NandosoAPI.Models
         public bool vegetarian { get; set; }
         public bool glutenFree { get; set; }
         //public string image { get; set; }
-
-        [JsonIgnore]
-        public virtual Discount discount { get; set; }
+        public double discount { get; set; }
     }
 }

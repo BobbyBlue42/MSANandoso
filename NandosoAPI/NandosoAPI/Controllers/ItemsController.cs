@@ -89,7 +89,8 @@ namespace NandosoAPI.Controllers
         [ResponseType(typeof(Item))]
         public IHttpActionResult DeleteItem(int id)
         {
-            Item item = db.Items.Find(id);
+            return BadRequest();
+            /*Item item = db.Items.Find(id);
             if (item == null)
             {
                 return NotFound();
@@ -98,7 +99,7 @@ namespace NandosoAPI.Controllers
             db.Items.Remove(item);
             db.SaveChanges();
 
-            return Ok(item);
+            return Ok(item);*/
         }
 
         protected override void Dispose(bool disposing)

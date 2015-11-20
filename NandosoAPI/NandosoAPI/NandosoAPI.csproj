@@ -101,12 +101,10 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DiscountsController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Discount.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\NandosoAPIContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
