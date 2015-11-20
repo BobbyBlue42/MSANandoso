@@ -1,11 +1,19 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace NandosoAPI.Models
 {
     public class Item
     {
+        public int ID { get; set; }
+        public string name { get; set; }
+        public double price { get; set; }
+        public bool vegetarian { get; set; }
+        public bool glutenFree { get; set; }
+        //public string image { get; set; }
+
+        [JsonIgnore]
+        public virtual Discount discount { get; set; }
     }
 }
