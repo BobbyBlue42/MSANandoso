@@ -25,7 +25,6 @@ namespace NandosoAPI.Models
 
             protected override void Seed(NandosoAPIContext context)
             {
-
                 var items = new List<Item>
                 {
                     new Item{ name = "Veggie Paella", vegetarian = true, glutenFree = true, price = 13.9, discount = 15},
