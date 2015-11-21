@@ -1,0 +1,41 @@
+﻿body {
+    background-color: #EA0003;
+}
+
+h1 {
+    color: #FFBB00;
+    font-size: 100px;
+    font-family: 'Comic Sans MS';
+    text-align: center;
+}
+
+.menuBar {
+    float: left;
+    font-size: 12px;
+    font-family: Arial;
+    text-align: left;
+    background-color: #E87475;
+    width: 300px;
+    height: 500px;
+    margin-right: 50px;
+}
+
+section {
+    
+}
+
+#logo {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

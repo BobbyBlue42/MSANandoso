@@ -95,7 +95,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\basicstyle.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\nandoso logo.jpg" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -122,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
