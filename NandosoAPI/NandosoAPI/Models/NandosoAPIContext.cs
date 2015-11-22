@@ -40,8 +40,25 @@ namespace NandosoAPI.Models
                 };
                 items.ForEach(s => context.Items.AddOrUpdate(p => p.name, s));
                 context.SaveChanges();
+
                 Admin admin = new Admin("admin", "admin");
                 context.Admins.AddOrUpdate(admin);
+                context.SaveChanges();
+
+                var reviews = new List<Review>
+                {
+                    new Review { appliesTo = items.SingleOrDefault(i => i.name.Equals("Veggie Burger")), review = "The veggie burger was great! Perfectly done, would recommend even to non-vegetarians.",
+                                 reviewValue = 10, submitter = "Jane", repliedTo = true, reviewDate = new DateTime(2015, 11, 20), reply = "Good to hear you liked it!"},
+                    new Review { appliesTo = items.SingleOrDefault(i => i.name.Equals("Fresh Garden Salad")), review = "Wife made me eat this, why would you even offer rabbit food at a burger shop?!",
+                                 reviewValue = 1, reviewDate = new DateTime(2015, 11, 20), repliedTo = true, submitter = "John", 
+                                 reply = "Hi John, we are very sorry to hear that you did not like our salad." + 
+                                 "We offer salads because some customers prefer to eat a salad while the rest of their family eats burgers - and we try to cater for everybody."},
+                    new Review { appliesTo = items.SingleOrDefault(i => i.name.Equals("Family Feast")), review = "The entire family loved it! We'll definitely be back!", reviewValue = 10,
+                                 reviewDate = new DateTime(2015, 11, 21), submitter = "James", repliedTo = true, reply = "That's great to hear, James! You are welcome back anytime!"},
+                    new Review { appliesTo = items.SingleOrDefault(i => i.name.Equals("8 BBQ Ribs")), review = "the ribs were just meh ive had better from other shops", reviewValue = 4,
+                                 reviewDate = new DateTime(2015, 11, 22), submitter = "Jim", repliedTo = false}
+                };
+                reviews.ForEach(r => context.Reviews.AddOrUpdate(p => p.submitter, r));
                 context.SaveChanges();
             }
         }
@@ -55,5 +72,6 @@ namespace NandosoAPI.Models
 
         public System.Data.Entity.DbSet<NandosoAPI.Models.Item> Items { get; set; }
         public System.Data.Entity.DbSet<NandosoAPI.Models.Admin> Admins { get; set; }
+        public System.Data.Entity.DbSet<NandosoAPI.Models.Review> Reviews { get; set; }
     }
 }
