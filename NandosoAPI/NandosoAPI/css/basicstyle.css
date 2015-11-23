@@ -35,9 +35,16 @@ header {
 }
 
 footer {
+    font-size: 12px;
     position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
+    border-color: #EA0003;
+    border-style: solid;
+    border-width: thin;
+    background-color: white;
+    text-align: right;
 }
 
 table {
@@ -54,4 +61,31 @@ th {
     border-color: grey;
     border-width: 1px;
     border-style: solid;
+}
+
+.tickBox {
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
+
+.priceField {
+    border-bottom: 1px solid grey;
+    text-align: right;
+}
+
+.basePriceField {
+    border-bottom: 1px solid grey;
+    text-align: right;
+    text-decoration: line-through;
+}
+
+.discountField {
+    border-bottom: 1px solid grey;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.itemField {
+    border-bottom: 1px solid grey;
 }
