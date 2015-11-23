@@ -25,7 +25,7 @@ namespace NandosoAPI.Models
 
             protected override void Seed(NandosoAPIContext context)
             {
-                var items = new List<Item>
+                /*var items = new List<Item>
                 {
                     new Item{ name = "Veggie Paella", vegetarian = true, glutenFree = true, price = 13.9, discount = 15},
                     new Item{ name = "Veggie Wrap", vegetarian = true, glutenFree = false, price = 9.9, discount = 20},
@@ -59,7 +59,7 @@ namespace NandosoAPI.Models
                                  reviewDate = new DateTime(2015, 11, 22), submitter = "Jim", repliedTo = false}
                 };
                 reviews.ForEach(r => context.Reviews.AddOrUpdate(p => p.submitter, r));
-                context.SaveChanges();
+                context.SaveChanges();*/
             }
         }
 

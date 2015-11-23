@@ -102,6 +102,8 @@
     <Content Include="Images\done.png" />
     <Content Include="Images\nandoso logo.jpg" />
     <Content Include="index.html" />
+    <Content Include="js\internet.js" />
+    <Content Include="js\loader.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -129,7 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
