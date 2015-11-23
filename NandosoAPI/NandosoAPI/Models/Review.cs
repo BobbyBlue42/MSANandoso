@@ -16,7 +16,7 @@ namespace NandosoAPI.Models
         public bool repliedTo { get; set; }
         public string reply { get; set; }
 
-        public virtual Item appliesTo { get; set; }
+        public string appliesTo { get; set; }
         public int reviewValue { get; set; }
     }
 }

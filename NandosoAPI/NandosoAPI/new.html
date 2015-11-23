@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nandoso - New Review</title>
+    <link rel="stylesheet" href="css/basicstyle.css" />
+    <script src="js/review.js"></script>
+</head>
+<body>
+    <header>
+        <a id="logo" href="index.html"><img id="logo" src="Images/nandoso logo.jpg" /></a>
+        <h1>Nandoso</h1>
+    </header>
+    <br>
+    <aside class="menuBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discounts.html">Discounts</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </aside>
+    <section>
+        Your name:
+        <br />
+        <input type="text" id="nameBox" autofocus />
+        <br />
+        The item you wish to review:
+        <br />
+        <select id="dropDown">
+            <option value=""></option>
+        </select>
+        <br />
+        Your rating, out of 10:
+        <br />
+        <input type="range" min="1" max="10" id="scoreBox" />
+        <br />
+        Your review:
+        <br />
+        <textarea id="reviewBox" rows="7" cols="150"></textarea>
+        <br />
+        <input type="button" value="Submit" onclick="submit();"/>
+        <!--
+        public string submitter { get; set; }
+        public string review { get; set; }
+
+        public virtual Item appliesTo { get; set; }
+        public int reviewValue { get; set; }
+        -->
+    </section>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = 'api/Items';
+        $(window).load(function () {
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    setupDropDown(data);
+                });
+        });
+
+        function submit() {
+            var name = $('#nameBox').val();
+            var itemName = $('#dropDown').val();
+            var rating = $('#scoreBox').val();
+            var review = $('#reviewBox').val();
+            var date = new Date();
+            
+            $.post('api/Reviews',
+                {
+                    submitter: name,
+                    review: review,
+                    reviewDate: date,
+                    repliedTo: false,
+                    appliesTo: {
+                        ID: item.ID,
+                        name: item.name,
+                        price: item.price,
+                        vegetarian: item.vegetarian,
+                        glutenFree: item.glutenFree,
+                        discount: item.discount
+                    },
+                    reviewValue: rating
+                },
+                function (data, status) {
+                    alert("Data:\n" + data + "\nStatus\n" + status);
+                })
+            //new Review { appliesTo = items.SingleOrDefault(i => i.name.Equals("8 BBQ Ribs")), review = "the ribs were just meh ive had better from other shops", reviewValue = 4,
+            //                     reviewDate = new DateTime(2015, 11, 22), submitter = "Jim", repliedTo = false}
+        }
+    </script>
+</body>
+</html>
