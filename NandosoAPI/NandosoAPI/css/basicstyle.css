@@ -15,7 +15,7 @@ h1 {
     font-family: Arial;
     text-align: left;
     background-color: #E87475;
-    width: 300px;
+    width: 10%;
     height: 500px;
     margin-right: 50px;
 }
@@ -38,4 +38,20 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+table {
+    font-size: 16px;
+    background-color: #F88485;
+    padding: 5px, 5px, 5px, 5px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    width: 75%;
+}
+
+th {
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
 }

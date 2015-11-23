@@ -96,7 +96,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\basicstyle.css" />
+    <Content Include="discounts.html" />
     <Content Include="Global.asax" />
+    <Content Include="Images\delete30.png" />
+    <Content Include="Images\done.png" />
     <Content Include="Images\nandoso logo.jpg" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
