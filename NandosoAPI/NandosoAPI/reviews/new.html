@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nandoso - New Review</title>
+    <link rel="stylesheet" href="../css/basicstyle.css" />
+    <script src="../js/review.js"></script>
+</head>
+<body>
+    <header>
+        <a id="logo" href="index.html"><img id="logo" src="../Images/nandoso logo.jpg" /></a>
+        <h1>Nandoso</h1>
+    </header>
+    <br>
+    <aside class="menuBar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../discounts.html">Discounts</a></li>
+            <li><a href="../reviews.html">Reviews</a></li>
+        </ul>
+    </aside>
+    <section>
+        Your name:
+        <br />
+        <input type="text" id="nameBox" autofocus />
+        <br />
+        The item you wish to review:
+        <br />
+        <select id="dropDown">
+
+        </select>
+        <br />
+        Your rating, out of 10:
+        <br />
+        <input type="range" min="1" max="10" id="scoreBox" />
+        <br />
+        Your review:
+        <br />
+        <textarea id="reviewBox" rows="7" cols="150">Hello</textarea>
+        <br />
+        <input type="button" value="Submit" onclick="submit();"/>
+        <!--
+        public string submitter { get; set; }
+        public string review { get; set; }
+
+        public virtual Item appliesTo { get; set; }
+        public int reviewValue { get; set; }
+        -->
+    </section>
+</body>
+</html>

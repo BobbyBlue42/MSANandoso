@@ -16,12 +16,12 @@ h1 {
     text-align: left;
     background-color: #E87475;
     width: 10%;
-    height: 500px;
-    margin-right: 50px;
+    height: 100%;
+    margin-right: 5%;
 }
 
 section {
-    
+    margin-left: 15%;
 }
 
 #logo {
@@ -54,7 +54,7 @@ table {
     border-color: black;
     border-width: 2px;
     border-style: solid;
-    width: 75%;
+    width: 85%;
 }
 
 th {
@@ -82,10 +82,24 @@ th {
 .discountField {
     border-bottom: 1px solid grey;
     text-align: right;
+}
+
+.discountPriceField {
+    border-bottom: 1px solid grey;
+    text-align: right;
     font-size: 18px;
     font-weight: bold;
 }
 
 .itemField {
     border-bottom: 1px solid grey;
+}
+
+#reviewDiv {
+    background-color: #F88485;
+    padding: 5px, 5px, 5px, 5px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    width: 85%;
 }
